@@ -26,3 +26,7 @@ enablenbd:
 
 disablenbd:
 	sudo rmmod nbd
+
+ssdttime:
+	./oc/Tools/SSDTTime/SSDTTime.command
+
