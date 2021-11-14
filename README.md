@@ -3,4 +3,5 @@ Boot args `agdpmod=pikera`, `agdpmod=ignore` + MacPro7,1, `agdpmod=vit9696` and 
 It seems `pikera` and `vit9696` are defualt.
 `npci=0x2000` boot arg if mobo doesn't support above 4G encoding, mine does but I have it disabled. Does not work.
 Connect directly to GPU does not work.
-Remove `whatevergreen`?
+Remove `whatevergreen`? Does not work.
+https://www.reddit.com/r/hackintosh/comments/b5a6ry/ioconsoleusersgioscreenlockstate_3_blackscreen/
