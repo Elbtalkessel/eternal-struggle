@@ -21,6 +21,18 @@
 - SSDT-HPET.aml do fixes power mgm issue but sometimes doesn't
 
 # Current issue
-Stuck at
+_Stuck at_
 
-gIOScreenLockState 3, hs 0, bs 0, now 0, sm 0x0
+- gIOScreenLockState 3, hs 0, bs 0, now 0, sm 0x0
+
+_Before it_
+
+- KextLog: kernelmanagerd is not active
+- apfs_keybag_init failed to initialize valume keybag, err = 2
+- SATA WARNING: IDENTIFY DEVICE checksum not implemented
+- IOUserServer Driver Kit AppleEthernetE1000 server exit before starting
+- AppleKeyStore uexpected session: 100000 uid: -1 requested by: 118
+- AppleKeyStore operation failed
+- EXC_RESOURCE -> MRT[71] exceeded mem limit: InactiveSoft 50MB (non-fatal)
+- AppleIntelCPuPowerManagement timeout out *(not always)*
+
