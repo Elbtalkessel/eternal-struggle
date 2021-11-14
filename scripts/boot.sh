@@ -7,8 +7,9 @@ source ./env.sh
 
 # shellcheck disable=SC2054
 args=(
-  -enable-kvm -m "$ALLOCATED_RAM"
-  -cpu host,vendor=GenuineIntel,"$MY_OPTIONS"
+  -enable-kvm
+  -m "$ALLOCATED_RAM"
+  -cpu "$MY_OPTIONS"
   -machine q35
   -usb -device usb-kbd -device usb-tablet
   -smp "$CPU_THREADS",cores="$CPU_CORES",sockets="$CPU_SOCKETS"

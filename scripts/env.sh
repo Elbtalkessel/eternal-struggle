@@ -1,8 +1,11 @@
 #!/bin/sh
 
-#MY_OPTIONS="+invtsc,vmware-cpuid-freq=on,+pcid,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check"
-# when passing -cpu host, options will be copied from cpi
-MY_OPTSIONS="+invtsc,vmware-cpuid-freq=on"
+# slow, dk why
+CPU_HOST="host,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on"
+# fast
+CPU_PENRYN="Penryn,kvm=on,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check"
+
+MY_OPTIONS=$CPU_PENRYN
 
 ALLOCATED_RAM="8192" # MiB
 CPU_SOCKETS="1"
