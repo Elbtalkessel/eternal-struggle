@@ -15,7 +15,7 @@ Remove `whatevergreen`? Does not work.
 Removing `AppleALC.kext` doesn't help.
 Tried adding SSDT-EC-DESKTOP.aml and power management related one.
 Non verbose boot gives screen about failed boot and asks press any key.
-`romfile="...path.."` on pci passtrhough in args does nothing
+`romfile="...path.."` on pci passtrhough in args does nothing.
 
 # Unrelated prob
 SSDT-HPET.aml do fixes power mgm issue but sometimes doesn't
