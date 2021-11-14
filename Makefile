@@ -13,3 +13,11 @@ propertree:
 smbios:
 	python3 oc/Tools/GenSMBIOS/GenSMBIOS.command
 
+mountefi:
+	sudo qemu-nbd --connect=/dev/nbd0 oc/OpenCore.qcow2
+	sudo mount /dev/nbd0p1 /media
+
+umountefi:
+	sudo umount /media
+	sudo qemu-nbd --disconnect /dev/nbd0
+
