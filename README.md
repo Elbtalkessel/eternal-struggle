@@ -5,7 +5,6 @@
 - Memory: `32GB`
 - Mobo: `Asus Strix X570-F`
 
-# GPU
 # Notes
 - Boot args `agdpmod=pikera`, `agdpmod=ignore` + MacPro7,1, `agdpmod=vit9696` and `-igfxmlr` does not work.
 - It seems `pikera` and `vit9696` are defualt.
@@ -16,6 +15,7 @@
 - Tried adding SSDT-EC-DESKTOP.aml and power management related one.
 - Non verbose boot gives screen about failed boot and asks press any key.
 - `romfile="...path.."` on pci passtrhough in args does nothing.
+- 1024x768 resolution did not help.
 
 # Unrelated prob
 - SSDT-HPET.aml do fixes power mgm issue but sometimes doesn't
