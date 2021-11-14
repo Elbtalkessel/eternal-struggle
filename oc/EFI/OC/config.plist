@@ -6,15 +6,15 @@
   <dict>
     <key>Add</key>
     <array>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-USBX.aml</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-USBX.aml</string>
-			</dict>
-		</array>
+      <dict>
+        <key>Comment</key>
+        <string>SSDT-USBX.aml</string>
+        <key>Enabled</key>
+        <true/>
+        <key>Path</key>
+        <string>SSDT-USBX.aml</string>
+      </dict>
+    </array>
     <key>Delete</key>
     <array/>
     <key>Patch</key>
@@ -94,24 +94,24 @@
   <dict>
     <key>Add</key>
     <array>
-			<dict>
-				<key>BundlePath</key>
-				<string>AppleMCEReporterDisabler.kext</string>
-				<key>Comment</key>
-				<string>AppleMCEReporterDisabler.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
+      <dict>
+        <key>BundlePath</key>
+        <string>AppleMCEReporterDisabler.kext</string>
+        <key>Comment</key>
+        <string>AppleMCEReporterDisabler.kext</string>
+        <key>Enabled</key>
+        <true/>
+        <key>ExecutablePath</key>
+        <string></string>
+        <key>Arch</key>
+        <string>Any</string>
+        <key>MaxKernel</key>
+        <string></string>
+        <key>MinKernel</key>
+        <string></string>
+        <key>PlistPath</key>
+        <string>Contents/Info.plist</string>
+      </dict>
       <dict>
         <key>Arch</key>
         <string>x86_64</string>
