@@ -8,7 +8,7 @@ update-oc:
 	cd scripts && ./update-image.sh
 
 propertree:
-	python3 oc/Tools/ProperTree/ProperTree.command &
+	python3 oc/Tools/ProperTree/ProperTree.command oc/EFI/OC/config.plist &
 
 smbios:
 	python3 oc/Tools/GenSMBIOS/GenSMBIOS.command
