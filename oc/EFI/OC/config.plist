@@ -214,9 +214,11 @@
     <key>Emulate</key>
     <dict>
       <key>Cpuid1Data</key>
-      <data>VAYFAAAAAAAAAAAAAAAAAA==</data>
+      <!--<data>VAYFAAAAAAAAAAAAAAAAAA==</data>-->
+      <data></data>
       <key>Cpuid1Mask</key>
-      <data>////AAAAAAAAAAAAAAAAAA==</data>
+      <!--<data>////AAAAAAAAAAAAAAAAAA==</data>-->
+      <data></data>
       <key>DummyPowerManagement</key>
       <false/>
       <key>MaxKernel</key>
