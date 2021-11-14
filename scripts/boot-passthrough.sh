@@ -11,15 +11,15 @@ args=(
   -m "$ALLOCATED_RAM"
   -cpu "$MY_OPTIONS"
   -machine q35
-  -usb -device usb-kbd -device usb-tablet
   -smp "$CPU_THREADS",cores="$CPU_CORES",sockets="$CPU_SOCKETS"
   -device usb-ehci,id=ehci
   -device isa-applesmc,osk="$OSK"
   -drive if=pflash,format=raw,readonly=on,file="$OVMF_CODE"
   -drive if=pflash,format=raw,file="$OVMF_VARS"
   -smbios type=2
-  # Disk controllers
+  # Sound, AppleALC requires it.
   -device ich9-intel-hda -device hda-duplex
+  # Controller
   -device ich9-ahci,id=sata
   # OpenCore boot image
   -device ide-hd,bus=sata.2,drive=OpenCoreBoot
@@ -37,7 +37,7 @@ args=(
   -display none
   -vga none
   # GPU + GPU audio
-  -device vfio-pci,host=0c:00.0,multifunction=on
+  -device vfio-pci,host=0c:00.0,multifunction=on,romfile="../../Navi 10.rom"
   -device vfio-pci,host=0c:00.1
 )
 
