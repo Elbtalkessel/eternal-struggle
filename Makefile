@@ -9,3 +9,7 @@ update-oc:
 
 propertree:
 	python3 oc/Tools/ProperTree/ProperTree.command &
+
+smbios:
+	python3 oc/Tools/GenSMBIOS/GenSMBIOS.command
+

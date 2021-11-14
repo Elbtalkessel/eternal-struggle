@@ -1,6 +1,8 @@
 #!/bin/sh
 
-MY_OPTIONS="+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check"
+#MY_OPTIONS="+invtsc,vmware-cpuid-freq=on,+pcid,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check"
+# when passing -cpu host, options will be copied from cpi
+MY_OPTSIONS="+invtsc,vmware-cpuid-freq=on"
 
 ALLOCATED_RAM="8192" # MiB
 CPU_SOCKETS="1"
