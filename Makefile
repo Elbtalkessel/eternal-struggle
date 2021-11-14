@@ -30,3 +30,11 @@ disablenbd:
 ssdttime:
 	./oc/Tools/SSDTTime/SSDTTime.command
 
+update-kext:
+	rm -rf oc/EFI/OC/Kexts/Lilu.kext oc/EFI/OC/Kexts/WhateverGreen.kext
+	cp -r oc/Builds/Lilu.kext oc/Builds/WhateverGreen.kext oc/EFI/OC/Kexts/
+
+update-core:
+	mv -f oc/Builds/OpenCore/BOOT/BOOTx64.efi oc/EFI/BOOT/
+	mv -f oc/Builds/OpenCore/OC/OpenCore.efi oc/EFI/OC/
+
