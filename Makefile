@@ -21,3 +21,8 @@ umountefi:
 	sudo umount /media
 	sudo qemu-nbd --disconnect /dev/nbd0
 
+enablenbd:
+	sudo modprobe nbd max_part=8
+
+disablenbd:
+	sudo rmmod nbd
