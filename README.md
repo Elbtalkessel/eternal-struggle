@@ -16,6 +16,9 @@
 - Non verbose boot gives screen about failed boot and asks press any key.
 - `romfile="...path.."` on pci passtrhough in args does nothing.
 - 1024x768 resolution did not help.
+- Adding `CtlnaAHCIPort` didn't help, though maybe SATA drivers missing so it can't mount disks or smth. Will leave it for now.
+- Adding `AppleIntelE1000e` fixed(?) complains about missing driver during boot, prob unrelated and can be removed later.
+- CPU power management issue is fixed by setting Cpuid1Data and Mask to empty string.
 
 # Unrelated prob
 - SSDT-HPET.aml do fixes power mgm issue but sometimes doesn't
@@ -24,6 +27,7 @@
 _Stuck at_
 
 - gIOScreenLockState 3, hs 0, bs 0, now 0, sm 0x0
+- `ACPI_SMC_PlatformPlugin::start - waitForService(resourceMatching(AppleInterlCPUPowerManagement)) timed out` issue persist, seems SSDT-HPET doesn't fix.
 
 _Before it_
 
