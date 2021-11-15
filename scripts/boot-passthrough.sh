@@ -37,7 +37,7 @@ args=(
   -display none
   -vga none
   # GPU + GPU audio
-  -device vfio-pci,host=0c:00.0,multifunction=on,romfile="../../Navi 10.rom"
+  -device vfio-pci,host=0c:00.0,multifunction=on
   -device vfio-pci,host=0c:00.1
 )
 
