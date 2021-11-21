@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2054
 
-set -e
 source ./env.sh
 
 BASE=(
   -enable-kvm
   -m "$ALLOCATED_RAM"
-  -cpu "$MY_OPTIONS"
+  -cpu "$CPU_OPTIONS"
   -machine q35
   -smp "$CPU_THREADS",cores="$CPU_CORES",sockets="$CPU_SOCKETS"
   -device usb-ehci,id=ehci
@@ -48,6 +47,8 @@ GPU=(
   -device vfio-pci,host=0c:00.0,multifunction=on
   -device vfio-pci,host=0c:00.1
 )
+
+set -x
 
 case $1 in
 gpu) qemu-system-x86_64 "${BASE[@]}" "${GPU[@]}" ;;

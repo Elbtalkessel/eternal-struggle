@@ -2,9 +2,9 @@
 # shellcheck disable=SC2034
 
 CPU_HOST="host,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on"
-# CPU_PENRYN="Penryn,kvm=on,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check"
-CPU_PENRYN="Penryn,vendor=GenuineIntel,+hypervisor,+invtsc,kvm=on,+fma,+avx,+avx2,+aes,+ssse3,+sse4.2,+popcnt,+sse4a,+bmi1,+bmi2"
-MY_OPTIONS=$CPU_PENRYN
+CPU_PENRYN="Penryn,kvm=on,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check"
+#CPU_PENRYN="Penryn,vendor=GenuineIntel,+hypervisor,+invtsc,kvm=on,+fma,+avx,+avx2,+aes,+ssse3,+sse4.2,+popcnt,+sse4a,+bmi1,+bmi2"
+CPU_OPTIONS=$CPU_PENRYN
 
 ALLOCATED_RAM="8192" # MiB
 CPU_SOCKETS="1"
@@ -19,7 +19,7 @@ BOOTLOADER="$BASE_DIR/OpenCore.qcow2"
 INSTALLER="$BASE_DIR/BaseSystem.img"
 SYSTEM="$BASE_DIR/System.qcow2"
 OVMF_CODE="$BASE_DIR/OVMF_CODE.fd"
-OVMF_VARS="$BASE_DIR/OVMF_VARS.fd"
+OVMF_VARS="$BASE_DIR/OVMF_VARS-1024x768.fd"
 BOOT_MOUNT="/media"
 
 OSK="ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
