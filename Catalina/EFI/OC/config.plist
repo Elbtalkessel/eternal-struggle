@@ -560,7 +560,7 @@
 			<key>Vault</key>
 			<string>Optional</string>
 			<key>ScanPolicy</key>
-			<integer>257</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Tools</key>
 		<array>
