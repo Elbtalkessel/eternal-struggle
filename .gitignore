@@ -1,7 +1,5 @@
-disks
-oc/OpenCore.qcow2
-oc/Builds
-oc/Tools
-/.idea/
-/oc/Tools/ProperTree/Scripts/settings.json
-/oc/Tools/ProperTree/Scripts/
+tools
+builds
+.idea/
+*.qcow2
+*.img

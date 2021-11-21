@@ -1,40 +1,38 @@
+# Booting
+
 passthrough:
-	cd scripts && ./boot-passthrough.sh
+	cd scripts && boot-passthrough.sh
 
 boot:
-	cd scripts && ./boot.sh
+	cd scripts && boot.sh
 
-update-oc:
-	cd scripts && ./update-image.sh
+# EFI management
+
+update-efi:
+	cd scripts && ./run.sh updateEFI
+
+mount-efi:
+	cd scripts && ./run.sh mountEFI
+
+umount-efi:
+	cd scripts && ./run.sh umountEFI
+
+enable-nbd:
+	modprobe nbd max_part=8
+
+disable-nbd:
+	rmmod nbd
+
+# Shortcuts
 
 propertree:
-	python3 oc/Tools/ProperTree/ProperTree.command oc/EFI/OC/config.plist &
+	python3 tools/ProperTree/ProperTree.command &
 
 smbios:
-	python3 oc/Tools/GenSMBIOS/GenSMBIOS.command
-
-mountefi:
-	sudo qemu-nbd --connect=/dev/nbd0 oc/OpenCore.qcow2
-	sudo mount /dev/nbd0p1 /media
-
-umountefi:
-	sudo umount /media
-	sudo qemu-nbd --disconnect /dev/nbd0
-
-enablenbd:
-	sudo modprobe nbd max_part=8
-
-disablenbd:
-	sudo rmmod nbd
+	python3 tools/GenSMBIOS/GenSMBIOS.command
 
 ssdttime:
 	./oc/Tools/SSDTTime/SSDTTime.command
 
-update-kext:
-	rm -rf oc/EFI/OC/Kexts/Lilu.kext oc/EFI/OC/Kexts/WhateverGreen.kext
-	cp -r oc/Builds/Lilu.kext oc/Builds/WhateverGreen.kext oc/EFI/OC/Kexts/
-
-update-core:
-	mv -f oc/Builds/OpenCore/BOOT/BOOTx64.efi oc/EFI/BOOT/
-	mv -f oc/Builds/OpenCore/OC/OpenCore.efi oc/EFI/OC/
-
+chuserown:
+	chown -R $(shell stat -c "%U" README.md) -- *

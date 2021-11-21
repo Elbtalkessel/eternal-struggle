@@ -23,13 +23,13 @@ args=(
   -device ich9-ahci,id=sata
   # OpenCore boot image
   -device ide-hd,bus=sata.2,drive=OpenCoreBoot
-  -drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$OPEN_CORE_IMG"
+  -drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$BOOTLOADER"
   # Install media
   -device ide-hd,bus=sata.3,drive=InstallMedia
-  -drive id=InstallMedia,if=none,file="$INSTALLER_IMG",format=raw
+  -drive id=InstallMedia,if=none,format=raw,file="$INSTALLER"
   # Disk system installed onto
   -device ide-hd,bus=sata.4,drive=MacHDD
-  -drive id=MacHDD,if=none,file="$SYSTEM_IMG",format=qcow2
+  -drive id=MacHDD,if=none,format=qcow2,file="$SYSTEM"
   # USB pci card
   -device vfio-pci,host=05:00.0,bus=pcie.0
   # Virtual display
