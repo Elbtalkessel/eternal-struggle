@@ -19,7 +19,8 @@
 - Adding `CtlnaAHCIPort` didn't help, though maybe SATA drivers missing so it can't mount disks or smth. Will leave it for now.
 - Adding `AppleIntelE1000e` fixed(?) complains about missing driver during boot, prob unrelated and can be removed later.
 - CPU power management issue is fixed by setting Cpuid1Data and Mask to empty string.
-
+- https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/kernel-issues.html#black-screen-after-ioconsoleusers-gioscreenlock-on-navi does not work
+- `-radpg=15`, `-rad24`, `-radvesa`, `-raddvi` no luck. `-radvesa` panics if used together with `agdpmod=pikera`
 # Unrelated prob
 - SSDT-HPET.aml do fixes power mgm issue but sometimes doesn't
 
@@ -32,11 +33,11 @@ _Stuck at_
 _Before it_
 
 - KextLog: kernelmanagerd is not active
-- apfs_keybag_init failed to initialize valume keybag, err = 2
+- apfs_keybag_init failed to initialize volume keybag, err = 2
+  one reddit thread says it's gpu related, navi 6x, although mine is 5x. Vega works fine (how tho?)
 - SATA WARNING: IDENTIFY DEVICE checksum not implemented
 - IOUserServer Driver Kit AppleEthernetE1000 server exit before starting
 - AppleKeyStore uexpected session: 100000 uid: -1 requested by: 118
 - AppleKeyStore operation failed
 - EXC_RESOURCE -> MRT[71] exceeded mem limit: InactiveSoft 50MB (non-fatal)
 - AppleIntelCPuPowerManagement timeout out *(not always)*
-
