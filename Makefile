@@ -1,10 +1,7 @@
 # Booting
 
-passthrough:
-	cd scripts && boot-passthrough.sh
-
 boot:
-	cd scripts && boot.sh
+	cd scripts && ./boot.sh $(filter-out $@,$(MAKECMDGOALS))
 
 # EFI management
 

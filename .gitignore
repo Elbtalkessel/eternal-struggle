@@ -1,5 +1,5 @@
 tools
-builds
+dist
 .idea/
 *.qcow2
 *.img

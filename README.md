@@ -43,5 +43,12 @@ Cannot boot passing though GPU, reset to bootloader, messages:
 Update bootloader image
 ```shell
 # Where version is name of directory with EFI dir inside
-VERSION=Catalina sudo -E make update-efi
+OS=Catalina sudo -E make update-efi
 ```
+Run
+```shell
+OS=BigSur make boot
+OS=BigSur make boot gpu
+```
+Where `OS` name of directory you have EFI and disks, `gpu` argument is additional set of arguments to pass to `qemu`,
+see `boot.sh`
